@@ -42,7 +42,7 @@ console.log("Is Chuck Here?: ")
         var chuckJokes = '';
         var pullJokes = data[jokes];
             chuckJokes += "<article>";
-            chuckJokes += "<p>${pullJokes.joke} </p>";
+            chuckJokes += "<p>${pullJokes.jokes} </p>";
             chuckJokes += "<button type='button' value='delete' id='btn-delete'>"
             chuckJokes += "</article>";
         listDiv.innerHTML += pullJokes[i];
@@ -59,6 +59,6 @@ console.log("Is Chuck Here?: ")
 dataRequest.open("GET", "chuck.json");
 dataRequest.send();
 
-return
+return chuckNorris;
 
 }); (Chatty || {})
