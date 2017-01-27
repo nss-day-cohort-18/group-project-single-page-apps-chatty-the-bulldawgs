@@ -2,6 +2,7 @@
 console.log("Is Chuck Here?: ")
 
 
+
   var Chatty = (function(chuckNorris) {
 
     var chuckJokes = [];
