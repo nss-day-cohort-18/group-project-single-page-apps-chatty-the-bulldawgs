@@ -1,65 +1,46 @@
-//verbs: accept, remove from DOM, remove from array
+//verbs: accept, remove from DOM, remove from private array
+///////////////////////////////////////////////////////////////////////////////////
+//remove element from the DOM
 
-//One IIFE should accept a message element id and then remove the correct element 
-//from the DOM. This IIFE should also remove the corresponding message from the 
-//private array that was created in the previous IIFE.
+// <div id="div1">
+// <p id="p1">This is a paragraph.</p>
+// <p id="p2">This is another paragraph.</p>
+// </div>
+
+// var parent = document.getElementById("div1");
+// var child = document.getElementById("p1");
+// parent.removeChild(child);
+
+///////////////////////////////////////////////////////////////////////////////////
+//the private array is userInput
+//userInput.splice(index, 1);
+
+
 
 'use strict';
 
 console.log("Hello from Tres");
 
 var Chatty = (function(originalChatty){
-
-  var messageData = [];
-
-  var dataRequest = new XMLHttpRequest();
-  dataRequest.addEventListener("load", dataRequestLoadComplete);
-  dataRequest.addEventListener("error", dataRequestError);
-
-  function dataRequestLoadComplete(event){
-    console.log("message Data has loaded");
-    var data = JSON.parse(event.target.responseText);
-    showData(data);
-  }
-/////////////////////////////////////////////////////////////////////////////////
-  function showData(itDontMatter){
-    var listDiv = document.getElementById("all-messages");
-    var whatever;
-    for(whatever in itDontMatter) {
-      var messageData = '';
-      var messageItem = itDontMatter[whatever];
-      messageData += "<div>";
-      messageData += `<p> ${messageItem.name}: ${messageItem.type} </p>`
-      messageData += "</div>";
-      listDiv.innerHTML += messageData;
-    }
-  }
-/////////////////////////////////////////////////////////////////////////////////
 console.log("userInput from Taco2 is: ", userInput);
-originalChatty.removeMessage = function(input){
-        
-    // var whichIndex;
-    // jedi.forEach(function(item, index) {
-    //         if (item === who){
-    //                 whichIndex = index;
-    //         }   
-    // }); 
 
-    input.splice(whichIndex, 1); 
-    console.log("Which index: ", whichIndex);
-};  
-/////////////////////////////////////////////////////////////////////////////////
-  function dataRequestError(event){
-    console.log("DataRequest - Error", event.target.responseText);
-  }
+  originalChatty.removeMessage = function(input){
+          
+      // var whichIndex;
+      // jedi.forEach(function(item, index) {
+      //         if (item === who){
+      //                 whichIndex = index;
+      //         }   
+      // }); 
 
-  originalChatty.getAllmessages = function(){
- 	return messageData;
-  }
-
-  dataRequest.open("GET", "messages.json");
-  dataRequest.send();
-
-  return originalChatty;
+      input.splice(whichIndex, 1); 
+      console.log("Which index: ", whichIndex);
+  };  
 
 })(Chatty || {});
+
+
+
+//One IIFE should accept a message element id and then remove the correct element 
+//from the DOM. This IIFE should also remove the corresponding message from the 
+//private array that was created in the previous IIFE.
