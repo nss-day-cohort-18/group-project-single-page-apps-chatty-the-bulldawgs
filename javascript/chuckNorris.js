@@ -28,9 +28,9 @@ dataRequest.addEventListener("error", dataRequestError);
       chuckJokes += `<p>${chuckItem.joke}</p>`;
       chuckJokes += `<button type="button" value="delete" id="btn-delete">`;
       chuckJokes += "</article>"; 
-      // if (key >= 7) {
-      //   break;
-      // }
+      if (key >= 5) {
+        break;
+      }
       listDiv.innerHTML += chuckJokes;
     }      
   }
