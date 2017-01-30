@@ -30,7 +30,7 @@ userInput.onkeyup = function () {
 /****** function (submitInput):
          1) executed on keyCode == '13' keyup (ABOVE)
          2) pushes the userInput to the end of the messageArray
-         3) output the string into the userOutput div.
+         3) output the string into the userOutput div. RANDOME CHANGE
 *******/
 
 function submitInput() {
