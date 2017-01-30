@@ -1,9 +1,8 @@
 "use strict";
-console.log("Is Chuck Here?: ");
 
   var Chatty = (function() {
 
-    var chuckJokes = [];
+    //var chuckJokes = [];
 
     var dataRequest = new XMLHttpRequest();
       dataRequest.addEventListener("load", dataRequestLoadComplete);
@@ -11,7 +10,6 @@ console.log("Is Chuck Here?: ");
 
 /***** This function pulls the data from out Json file on the "load" eventListener. ****/
     function dataRequestLoadComplete (event) {
-      console.log("Data Loaded");
       var data = JSON.parse(event.target.responseText);
 
       showData(data);
@@ -23,14 +21,18 @@ console.log("Is Chuck Here?: ");
 
     function showData(data){
       var listDiv = document.getElementById("top");
-      var whatever;
-      for(whatever in data) {
+      var key;
+      for(key in data) {
         var chuckJokes = '';
-        var chuckItem = data[whatever];
+        var chuckItem = data[key];//-----this is working
+        console.log("key", key);
         chuckJokes += "<article>";
         chuckJokes += `<p>${chuckItem.joke}</p>`;
         chuckJokes += `<button type="button" value="delete" id="btn-delete">`;
         chuckJokes += "</article>"; 
+        if (key >= 7) {
+          break;
+        };
         listDiv.innerHTML += chuckJokes;
       }      
     }
