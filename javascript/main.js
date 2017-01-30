@@ -1,15 +1,8 @@
 /*var inputBox = document.getElementById("userInput")
 
-
-
-
-
-
 var Chatty = (function(){
 console.log("change stuff");
 `What is ${console.log("in template literal")}`
-
-
 
 }());*/
 var array = [];
@@ -19,6 +12,10 @@ var btn_userInput = document.getElementById('btn-userInput');
 var userOutput = document.getElementById('userOutput');
 var outPut = "<div  id='newInput'>" + array.slice(-1)[0] + "<button type='button' class='btn btn-danger' id='btn-delete'>Chuck Chop This Joke</button>" + "</div>" + "<br>";
 
+document.getElementById('dark').addEventListener('click', function() {
+    body.classList.toggle('new-element-class');
+document.getElementById('large').addEventListener('click', function() {
+    body.classList.toggle('new-larger-class');
 
 /****** document.userInput.onkeyup:
         1) if the user pushes enter
@@ -29,7 +26,6 @@ userInput.onkeyup = function () {
         submitInput();
     }
 }
-
 
 /****** function (submitInput):
          1) executed on keyCode == '13' keyup (ABOVE)
@@ -43,29 +39,4 @@ function submitInput() {
   console.log("array :", array);
   document.querySelector('.userOutput').innerHTML += "<div  id='newInput'>" + array.slice(-1)[0] + "<button type='button' class='btn btn-danger' id='btn-delete'>Chuck Chop This Joke</button>" + "</div>" + "<br>";
   console.log("output :", array)
-}
-
-
-/****** document.btn-userInput.onclick = function():
-        1) on the btn-userInput click
-        2) the userInput is pushed to the end of the array
-        3) outputs the string into the userOutput div with a button.
-******/
-
-
-/******
-This is to reset the search bar after input... NOT WORKING
-*******/
-function resetform() {
-  document.getElementById("input-group").reset();
-      resetform();
-}
-
-btn_userInput.onclick = function() {
-    var newMessage = userInput.value;
-    array.push(newMessage);
-    console.log("array :", array);
-    document.querySelector('.userOutput').innerHTML += "<div  id='newInput'>" + array.slice(-1)[0] + "<button type='button' class='btn btn-danger' id='btn-delete'>Chuck Chop This Joke</button>" + "</div>" + "<br>";
-    resetform();
-    console.log("output :", array)
 }
