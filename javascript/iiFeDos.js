@@ -1,5 +1,5 @@
 'use strict'
-
+console.log("Second IIFE is working");
 var Chatty = (function(event){
 
 
