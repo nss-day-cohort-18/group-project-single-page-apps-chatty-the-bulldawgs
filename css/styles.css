@@ -51,16 +51,16 @@ label {
 
 /*Psuedo classes for the text and theme buttons*/
 
-/*#btn-darkTheme:active {
+.btn-darkTheme {
 	background-color: #070707;
 	color: white;
 }
 
-#btn-largeText:active {
+.btn-largeText {
 	font-size: 3em;
 	font-family: 'Bree Serif', serif;
 }
-*/
+
 /*Logo Image Styling*/
 
 .img-responsive {
