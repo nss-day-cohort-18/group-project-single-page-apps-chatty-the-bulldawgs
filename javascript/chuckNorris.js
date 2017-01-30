@@ -1,5 +1,5 @@
 "use strict";
-console.log("Is Chuck Here?: ")
+console.log("Is Chuck Here?: ");
 
   var Chatty = (function() {
 
@@ -13,12 +13,12 @@ console.log("Is Chuck Here?: ")
     function dataRequestLoadComplete (event) {
       console.log("Data Loaded");
       var data = JSON.parse(event.target.responseText);
+
       showData(data);
-    };
+    }
 
     function dataRequestError(event) {
       console.log("Failed load: ", event.target.responseText);
-
     }
 
     function showData(data){
@@ -34,8 +34,6 @@ console.log("Is Chuck Here?: ")
         listDiv.innerHTML += chuckJokes;
       }      
     }
-  }
-}
 
 dataRequest.open("GET", "chuck.json");
 dataRequest.send();
