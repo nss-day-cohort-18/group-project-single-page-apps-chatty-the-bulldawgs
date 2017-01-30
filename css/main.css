@@ -1,0 +1,19 @@
+.checkbox {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+#btn-deleteAll {
+  margin-left: 200%;
+  margin-top: 10px;
+}
+
+#btn-userInput {
+   border: 10px solid black;
+}
+body {
+  padding-top: 80px;
+  padding-left: 5%;
+  padding-right: 5%;
+}

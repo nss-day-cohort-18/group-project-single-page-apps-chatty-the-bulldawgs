@@ -1,0 +1,29 @@
+/*Clearing the browser defaults*/
+* {
+	margin: 0;
+	padding: 0;
+	background-color: #C0C0C0;
+	font-size: 1em;
+	color: black;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+/*Psuedo classes for the text and theme buttons*/
+
+#btn-darkTheme:active {
+	background-color: #070707;
+	color: white;
+}
+
+#btn-largeText:active {
+	font-size: 3em;
+	font-family: 'Bree Serif', serif;
+}
+
+/*Logo Image Styling*/
+
+#logo {
+	border-radius: 25%;
+	border: 1px solid darkred;
+	
+}
