@@ -5,42 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<header>      
       <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
+      	<div class="container">
             <div class="brand">
                 <a class="navbar-brand" href="#">
                   <img src="image/chuck.png" class="img-responsive" alt="Chuck Sees you even when he doesn't"></a>
+                  <h4>Chuck Norris was born MVP</h4>
             </div>
 
 
             <!-- Collect the nav links, forms, and other content for toggling -->
 
-      <form class="navbar-form"  role="search">
+      		<form class="navbar-form"  role="search">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Make Chuck Laugh, or else..." id="userInput">
-                    <button type="button" class="btn btn-xs btn-danger" id="btn-userInput">Make Chuck Chuckle</button>
                 </div>
 
 
-          <div class ="pull-right">
-              <div class="checkbox">
-                <label><input type="checkbox" value="">Angry Chuck</label>
-              </div>
-          </div>
+	          	<div class ="pull-right">
+	              <div class="checkbox">
+	                <label><input type="checkbox" value="" id="dark">Angry Chuck</label>
+	              </div>
+	          	</div>
 
-            <div class ="pull-right">
-              <div class="checkbox">
-                <label><input type="checkbox" value="">Evil Chuck</label>
-              </div>
-            </div>
+		        <div class ="pull-right">
+		          <div class="checkbox" >
+		            <label><input type="checkbox" value="" id="large">Hulk Chuck</label>
+		          </div>
+		        </div>
 
-               <div class="nav navbar-nav navbar-right">
-                  <button type="button form-right" class="btn btn-lg btn-danger" id="btn-deleteAll">CHUCK DESTROYS ALL</button>
-              </div>
-        </div>
-      </form>
+	            <div class="nav navbar-nav navbar-right">
+	                 <button type="button form-right" class="btn btn-lg btn-danger" id="btn-deleteAll">CHUCK DESTROYS ALL</button>
+	            </div>
+        	</form>
+    	</div> <!--end of container div -->
     </nav>
-</head>
+</header>
 
 <body>
   <div class="jumbotron">
