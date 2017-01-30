@@ -23,11 +23,19 @@ var Chatty = (function(originalChatty){
     };  
 
     originalChatty.removeMessageFromDom = function(input){
-      //get the buttonID--btn-delete2 for example
-      //possibly get the index number
+      //newInput += "<article>";---should the articles have IDs as well?
+      //newInput += "<p>"${messageString.message}"</p>";
+      //newInput += "<button type='button' value='delete' id='btn-delete'>Delete</button>"
+      //newInput += "</article>";
 
       var element = document.getElementById('user' + itemid ); 
       element.parentNode.removeChild(element); 
+
+      //possibility
+      //var element = document.getElementById("articleId");
+      //while (element.firstChild) {
+      //element.removeChild(element.firstChild);
+}
     }
   }
 
