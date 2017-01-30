@@ -1,12 +1,8 @@
-//verbs: accept, remove from DOM, remove from private array
-///////////////////////////////////////////////////////////////////////////////////
-
-'use strict';
+"use strict";
 
 console.log("Hello from Tres");
 
 var Chatty = (function(originalChatty){
-  console.log("userInput from Taco2 is: ", userInput);
   //var userInput = [];
   //var newMessage = document.getElementById("user");
 
