@@ -1,3 +1,5 @@
+console.log("main IIFE is working");
+
 var array = [];
 var userInput = document.getElementById('userInput');
 var last_element = array[array.length - 1];
