@@ -15,10 +15,10 @@ var Chatty = (function(event){
 		  for(message in userInput) {
 		    var newInput = '';
 		    var messageString = userInput[message];
-		    newInput += "<article>";
-		    newInput += "<p>"${messageString.message}"</p>";
-		    newInput += "<button type='button' value='delete' id='btn-delete'>Delete</button>"
-		    newInput += "</article>";
+		    newInput += `<article>`;
+		    newInput += `<p>${messageString.message}</p>`;
+		    newInput += `<button type='button' value='delete' id='btn-delete'>Delete</button>`;
+		    newInput += `</article>`;
 
 		    newMessage.innerHTML += newInput;
 		  }
