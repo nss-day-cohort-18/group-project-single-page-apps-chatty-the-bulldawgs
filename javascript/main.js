@@ -40,14 +40,23 @@ var btn_userInput = document.getElementById('btn-userInput');
 var userOutput = document.getElementById('userOutput');
 //creating a new div for the messages in messageArray
 var outPut = "<div  id='newInput'>" + messageArray.slice(-1)[0] + "<button type='button' class='btn btn-danger' id='btn-delete'>Chuck Chop This Joke</button>" + "</div>" + "<br>";
+
+
 //toggles the theme from light to dark
-document.getElementById('dark').addEventListener('click', function() {
-    div.classList.toggle('btn-darkTheme');//need to fix this class name since it doesn't exist 
-  })
+  //  document.querySelector('div').addEventListener('click', function(event) {
+  //   console.log(event);
+  //   //need to fix this class name since it doesn't exist 
+  //   classList.toggle('btn-darkTheme');
+  //   console.log("You made it dark");
+  // })
+
+
+
+
 //toggles the font size from default size to bigger
-document.getElementById('large').addEventListener('click', function() {
-    div.classList.toggle('btn-largeText');//need to fix this class name since it doesn't exist
-  })
+// document.getElementById('large').addEventListener('click', function() {
+//     body.classList.add('btn-largeText');//need to fix this class name since it doesn't exist
+//   })
 
 
 

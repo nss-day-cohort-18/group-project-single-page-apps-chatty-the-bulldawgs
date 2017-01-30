@@ -24,12 +24,11 @@ var Chatty = (function(event){
 		  }
 		};
 
-	//exposing the array (make public) to make it accessable to the other IIFE's  
+	//exposing the array (make public) to make it accessable to the other IIFEs  
 	event.getMessage = function(){
 		return userInput;
 	};
 
-	//delete message from array as well as the DOM...gonna need some work on this one
 
 	//push the user's message into private array 
 	event.setMessage = function(message){
