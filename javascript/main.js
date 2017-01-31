@@ -45,12 +45,14 @@ function submitInput() {
 
 
 
-function clearBox(jumbotron){
-  var removeMessages = document.getElementById("jumbotron").innerHTML = "";
+//function clearBox(jumbotron){
+  function clearBox(){
+  var removeTop = document.getElementById("top").innerText = "";
+  var removeUserOutput = document.getElementById("userOutput").innerText = "";
+  //array = [];
   var deleteAllButton = document.getElementById("btn-deleteAll");
-  if (removeMessages === "") {
+  if (removeTop === "") {
     deleteAllButton.setAttribute("disabled", true)};
-  console.log("Everything's clear");
 };
 
 
