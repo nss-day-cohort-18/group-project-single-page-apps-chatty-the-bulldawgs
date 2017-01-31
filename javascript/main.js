@@ -57,3 +57,22 @@ btn_userInput.onclick = function() {
     resetform();
     console.log("output :", array)
 }
+
+/********This is the clear all fields button that is supposed to clear all the messages from the ouput divs*****/
+
+function clearBox("top"){
+  var removeMessages = document.getElementById("top").innerHTML = "";
+  console.log("Everything's clear";
+};
+
+
+//Example found from StackOverflow:
+// function clearBox(elementID)
+// {
+//     document.getElementById(elementID).innerHTML = "";
+// }
+
+
+
+
+
