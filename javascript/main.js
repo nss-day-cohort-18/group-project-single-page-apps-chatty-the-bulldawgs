@@ -60,9 +60,9 @@ btn_userInput.onclick = function() {
 
 /********This is the clear all fields button that is supposed to clear all the messages from the ouput divs*****/
 
-function clearBox("top"){
+function clearBox(top){
   var removeMessages = document.getElementById("top").innerHTML = "";
-  console.log("Everything's clear";
+  console.log("Everything's clear");
 };
 
 

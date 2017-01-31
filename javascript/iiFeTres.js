@@ -8,7 +8,7 @@ var Chatty = (function(originalChatty){
 
   return {
 
-    originalChatty.removeMessageFromArray = function(input){
+    originalChatty.removeMessageFromArray: function(input){
         //get the buttonID--btn-delete2 for example
         //possibly get the index number
         //see splice below
@@ -18,7 +18,7 @@ var Chatty = (function(originalChatty){
         console.log("The new userInput array: ", userInput);
     };  
 
-    originalChatty.removeMessageFromDom = function(input){
+    originalChatty.removeMessageFromDom: function(input){
       //newInput += "<article>";---should the articles have IDs as well?
       //newInput += "<p>"${messageString.message}"</p>";
       //newInput += "<button type='button' value='delete' id='btn-delete'>Delete</button>"
