@@ -1,45 +1,29 @@
 'use strict'
 console.log("Second IIFE is working");
-var Chatty = (function(event){
+
+var Chatty = (function(otherChatty) {
+console.log("here?:");
+
+	var array = [];
+console.log("array>");
 
 
-	var userInput = [];
+	otherChatty.submitInput = function(event) {
+		console.log("here?");
+	  var newMessage = userInput.value;
+	  if (newMessage.length < 1) {
+	  alert("Chuck does not have time for your games...");
+	  return;
+	}
+	  else {
+	  array.push(newMessage);
+	  console.log("array :", array);
+	  userOutput.innerHTML += "<div id='newInput'>" + array.slice(-1)[0] + "<br>" + "<button type='button' class='btn btn-danger' id='btn-delete'>Chuck Chop This Joke</button>" + "</div>" + "<br>";
+	  userInput.value = "";
+	  console.log("output :", array)
+	  }
+	}
 
-	//get the elementById that holds the user's message, and get the user's input from the text field
-
-
-	//add user's message and accompanying delete button to the DOM via .innerHTML, create a delete button, probably going to use back tics
-		function showData(userInput){
-			var newMessage = document.getElementById("user");
-
-		  for(message in userInput) {
-		    var newInput = '';
-		    var messageString = userInput[message];
-		    newInput += `<article>`;
-		    newInput += `<p>${messageString.message}</p>`;
-		    newInput += `<button type='button' value='delete' id='btn-delete'>Delete</button>`;
-		    newInput += `</article>`;
-
-		    newMessage.innerHTML += newInput;
-		  }
-		};
-
-	//exposing the array (make public) to make it accessable to the other IIFE's  
-	event.getMessage = function(){
-		return userInput;
-	};
-
-	//delete message from array as well as the DOM...gonna need some work on this one
-
-	//push the user's message into private array 
-	event.setMessage = function(message){
-		userInput.push(message);//come back to this
-		console.log("You've added this message: ", message);
-	};
-
-
-
-
-	return event;
+	return otherChatty;
 
 })(Chatty || {});
