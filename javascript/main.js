@@ -29,33 +29,11 @@ function submitInput() {
   var newMessage = userInput.value;
   array.push(newMessage);
   console.log("array :", array);
-  document.querySelector('.userOutput').innerHTML += "<div  id='newInput'>" + array.slice(-1)[0] + "<button type='button' class='btn btn-danger' id='btn-delete'>Chuck Chop This Joke</button>" + "</div>" + "<br>";
+  userOutput.innerHTML += "<div  id='newInput'>" + array.slice(-1)[0] + "<br>" + "<button type='button' class='btn btn-danger' id='btn-delete'>Chuck Chop This Joke</button>" + "</div>" + "<br>";
   console.log("output :", array)
 }
 
 
-/****** document.btn-userInput.onclick = function():
-        1) on the btn-userInput click
-        2) the userInput is pushed to the end of the array
-        3) outputs the string into the userOutput div with a button.
-******/
-
-
-/******
-This is to reset the search bar after input... NOT WORKING
-*******/
-function resetform() {
-  document.getElementById("input-group").reset();
-      resetform();
-}
-
-btn_userInput.onclick = function() {
-    var newMessage = userInput.value;
-    array.push(newMessage);
-    console.log("array :", array);
-    document.querySelector('.userOutput').innerHTML += "<div  id='newInput'>" + array.slice(-1)[0] + "<button type='button' class='btn btn-danger' id='btn-delete'>Chuck Chop This Joke</button>" + "</div>" + "<br>";
-    resetform();
-    console.log("output :", array)
 }
 
 /********This is the clear all fields button that is supposed to clear all the messages from the ouput divs*****/
@@ -69,9 +47,4 @@ function clearBox(jumbotron){
     deleteAllButton.setAttribute("disabled", true)};
   console.log("Everything's clear");
 };
-
-
-
-
-
-
+ master
