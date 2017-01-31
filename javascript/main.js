@@ -29,7 +29,7 @@ function submitInput() {
   var newMessage = userInput.value;
   array.push(newMessage);
   console.log("array :", array);
-  document.querySelector('.userOutput').innerHTML += "<div  id='newInput'>" + array.slice(-1)[0] + "<button type='button' class='btn btn-danger' id='btn-delete'>Chuck Chop This Joke</button>" + "</div>" + "<br>";
+  userOutput.innerHTML += "<div  id='newInput'>" + array.slice(-1)[0] + "<br>" + "<button type='button' class='btn btn-danger' id='btn-delete'>Chuck Chop This Joke</button>" + "</div>" + "<br>";
   console.log("output :", array)
 }
 
@@ -39,21 +39,3 @@ function submitInput() {
         2) the userInput is pushed to the end of the array
         3) outputs the string into the userOutput div with a button.
 ******/
-
-
-/******
-This is to reset the search bar after input... NOT WORKING
-*******/
-function resetform() {
-  document.getElementById("input-group").reset();
-      resetform();
-}
-
-btn_userInput.onclick = function() {
-    var newMessage = userInput.value;
-    array.push(newMessage);
-    console.log("array :", array);
-    document.querySelector('.userOutput').innerHTML += "<div  id='newInput'>" + array.slice(-1)[0] + "<button type='button' class='btn btn-danger' id='btn-delete'>Chuck Chop This Joke</button>" + "</div>" + "<br>";
-    resetform();
-    console.log("output :", array)
-}
