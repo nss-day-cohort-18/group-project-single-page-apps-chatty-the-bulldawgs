@@ -34,8 +34,17 @@ function submitInput() {
 }
 
 
-/****** document.btn-userInput.onclick = function():
-        1) on the btn-userInput click
-        2) the userInput is pushed to the end of the array
-        3) outputs the string into the userOutput div with a button.
-******/
+}
+
+/********This is the clear all fields button that is supposed to clear all the messages from the ouput divs*****/
+
+
+
+function clearBox(jumbotron){
+  var removeMessages = document.getElementById("jumbotron").innerHTML = "";
+  var deleteAllButton = document.getElementById("btn-deleteAll");
+  if (removeMessages === "") {
+    deleteAllButton.setAttribute("disabled", true)};
+  console.log("Everything's clear");
+};
+ master
