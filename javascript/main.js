@@ -27,10 +27,17 @@ userInput.onkeyup = function () {
 
 function submitInput() {
   var newMessage = userInput.value;
+  if (newMessage.length < 1) {
+  alert("Chuck does not have time for your games...");
+  return;
+}
+  else {
   array.push(newMessage);
   console.log("array :", array);
-  userOutput.innerHTML += "<div  id='newInput'>" + array.slice(-1)[0] + "<br>" + "<button type='button' class='btn btn-danger' id='btn-delete'>Chuck Chop This Joke</button>" + "</div>" + "<br>";
+  userOutput.innerHTML += "<div id='newInput'>" + array.slice(-1)[0] + "<br>" + "<button type='button' class='btn btn-danger' id='btn-delete'>Chuck Chop This Joke</button>" + "</div>" + "<br>";
+  userInput.value = "";
   console.log("output :", array)
+  }
 }
 
 
@@ -45,3 +52,15 @@ function clearBox(jumbotron){
     deleteAllButton.setAttribute("disabled", true)};
   console.log("Everything's clear");
 };
+
+
+  /*********************
+    Toggle Functions (color syntax)
+  **********************/
+
+document.getElementById('dark').addEventListener('click', function() {
+  jumbotron.classList.toggle('dark');
+})
+document.getElementById('large').addEventListener('click', function() {
+  jumbotron.classList.toggle('large');
+})
