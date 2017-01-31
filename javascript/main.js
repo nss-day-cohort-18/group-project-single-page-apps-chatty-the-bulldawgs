@@ -15,6 +15,8 @@ var outPut = "<div  id='newInput'>" + array.slice(-1)[0] + "<button type='button
 userInput.onkeyup = function () {
     if (window.event.keyCode == '13') {
         submitInput();
+        var deleteAllButton = document.getElementById("btn-deleteAll");
+        deleteAllButton.removeAttribute("disabled");
     }
 }
 
