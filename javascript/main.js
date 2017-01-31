@@ -57,3 +57,21 @@ btn_userInput.onclick = function() {
     resetform();
     console.log("output :", array)
 }
+
+/********This is the clear all fields button that is supposed to clear all the messages from the ouput divs*****/
+
+
+
+function clearBox(jumbotron){
+  var removeMessages = document.getElementById("jumbotron").innerHTML = "";
+  var deleteAllButton = document.getElementById("btn-deleteAll");
+  if (removeMessages === "") {
+    deleteAllButton.setAttribute("disabled", true)};
+  console.log("Everything's clear");
+};
+
+
+
+
+
+
