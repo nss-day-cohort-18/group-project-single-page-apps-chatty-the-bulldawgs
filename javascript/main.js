@@ -12,6 +12,7 @@ var userOutput = document.getElementById('userOutput');
 userInput.addEventListener('keypress', function () {
     if (window.event.keyCode == '13') {
         Chatty.submitInput(event);
+        submitInput();
     }
 });
 
