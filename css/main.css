@@ -31,3 +31,15 @@ div.pull-right {
 #jumbotron {
   margin-top: 30px;
 }
+.dark {
+  background-color: black;
+  color: white;
+  border: 12px dashed darkred;
+}
+.large {
+  font-size: 3em;
+}
+/*img {
+  max-width: 400%;
+  max-height: 400%;
+}*/
