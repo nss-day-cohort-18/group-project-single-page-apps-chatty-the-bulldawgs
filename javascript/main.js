@@ -12,6 +12,8 @@ var userOutput = document.getElementById('userOutput');
 userInput.addEventListener('keypress', function () {
     if (window.event.keyCode == '13') {
         Chatty.submitInput(event);
+        var deleteAllButton = document.getElementById("btn-deleteAll");
+        deleteAllButton.removeAttribute("disabled");
         submitInput();
     }
 });
