@@ -26,7 +26,7 @@ dataRequest.addEventListener("error", dataRequestError);
       //console.log("key", key);
       chuckJokes += `<article id="article${key}">`;
       chuckJokes += `<p>${chuckItem.joke}</p>`;
-      chuckJokes += `<button type='button' class='btn btn-danger' id='btn-delete'>Chuck Chop This Joke</button>`;
+      chuckJokes += `<button type='button' class='btn btn-danger' id='btn-delete${key}'>Chuck Chop This Joke</button>`;
       chuckJokes += "</article>";
       if (key >= 5) {
         break;
